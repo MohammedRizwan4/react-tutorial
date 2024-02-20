@@ -1,10 +1,15 @@
-import React from 'react';
+import React from 'react'
+import { useState } from 'react';
 
-class User extends React.Component {
-
-    render() {
-        return React.createElement('div', null, React.createElement('h1', null, "Hello React.createElement Example"))
-    }
+const User = () => {
+    let name, setName;
+    [name, setName] = useState("rizwan")
+    return (
+        <div>
+            {name}
+            <button onClick={() => name === "rizwan" ? setName("raiyan") : setName("rizwan")}>Change Name</button>
+        </div>
+    )
 }
 
-export default User;
+export default User
