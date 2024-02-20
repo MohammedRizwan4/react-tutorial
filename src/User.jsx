@@ -1,13 +1,12 @@
-export function User() {
+import React from 'react';
 
-    function NestedUser() {
-        return <>Nested Componenet</>
+class User extends React.Component {
+
+    render() {
+        return (
+            <div>Hello class Component</div>
+        )
     }
-
-    return <>
-        <h1>Hello Users</h1>
-        <NestedUser />
-    </>
 }
 
-// export default User
+export default User;
